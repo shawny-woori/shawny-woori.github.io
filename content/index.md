@@ -4,7 +4,7 @@ title: Shawn Woori
 
 생각과 연구와 삶의 노트.
 
-이곳에는 공개해도 좋은 글만 천천히 모읍니다. 긴 생각은 [[Essays/index|Essays]]에, 조금 더 사적인 기록과 일상의 조각은 [[Personal/index|Personal]]에 둡니다.
+이곳에 제 생각을 천천히 모읍니다. 긴 생각은 [[Essays/index|Essays]]에, 조금 더 사적인 기록과 일상의 조각은 [[Personal/index|Personal]]에 둡니다.
 
 ## Sections
 
