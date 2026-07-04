@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: shawnycheon.github.io
+  baseUrl: shawny-woori.github.io
   ignorePatterns:
     - private
     - templates
