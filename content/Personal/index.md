@@ -1,5 +1,8 @@
 ---
 title: Personal
+tags:
+  - index
+  - personal
 ---
 
 조금 더 개인적인 기록을 모읍니다.

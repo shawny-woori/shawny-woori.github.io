@@ -67,6 +67,55 @@ h3 {
   border-color: var(--shawn-border);
 }
 
+.explorer-content {
+  max-height: calc(100vh - 15rem);
+}
+
+.explorer .folder-container {
+  margin: 0.15rem 0;
+}
+
+.explorer .folder-title,
+.explorer .nav-file-title {
+  border-radius: 6px;
+  padding: 0.15rem 0.25rem;
+}
+
+.explorer .folder-title:hover,
+.explorer .nav-file-title:hover {
+  background: color-mix(in srgb, var(--secondary) 9%, transparent);
+}
+
+.explorer .nav-file-title {
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.graph > .graph-outer {
+  min-height: 390px;
+  height: 390px;
+  border: 1px solid var(--shawn-border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--light) 96%, var(--secondary));
+}
+
+.graph .graph-container canvas {
+  cursor: grab;
+}
+
+.graph .graph-container canvas:active {
+  cursor: grabbing;
+}
+
+.global-graph-outer .global-graph-container {
+  width: min(92vw, 1200px);
+  height: 86vh;
+}
+
+.global-graph-icon {
+  opacity: 0.78;
+}
+
 @media #{$desktop} {
   .page {
     max-width: 760px;

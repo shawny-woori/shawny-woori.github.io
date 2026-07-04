@@ -1,5 +1,8 @@
 ---
 title: Essays
+tags:
+  - index
+  - essay
 ---
 
 긴 글과 오래 다듬고 싶은 생각을 모읍니다.
