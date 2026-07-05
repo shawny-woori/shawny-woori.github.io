@@ -2,12 +2,53 @@
 
 // Personal reading theme
 :root {
+  --dark: #111111;
+  --darkgray: #171717;
+  --gray: #5c5c5c;
   --shawn-border: color-mix(in srgb, var(--lightgray) 72%, transparent);
   --shawn-surface: color-mix(in srgb, var(--light) 92%, white);
+  --shawn-glass: rgba(250, 248, 248, 0.46);
+  --shawn-paper: #ffffff;
 }
 
 body {
   letter-spacing: 0;
+  background: transparent;
+  color: var(--darkgray);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(250, 248, 248, 0.56), rgba(250, 248, 248, 0.56)),
+    url("/static/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+}
+
+:root[saved-theme="dark"] body::before {
+  background-image:
+    linear-gradient(rgba(22, 22, 24, 0.62), rgba(22, 22, 24, 0.62)),
+    url("/static/background.jpg");
+}
+
+:root[saved-theme="dark"] {
+  --dark: #ffffff;
+  --darkgray: #f5f5f5;
+  --gray: #d2d2d2;
+  --shawn-glass: rgba(22, 22, 24, 0.48);
+  --shawn-paper: #161618;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
 }
 
 .page {
@@ -16,6 +57,21 @@ body {
 
 .page article {
   font-size: 1.04rem;
+  color: var(--darkgray);
+}
+
+.page #quartz-body {
+  background: transparent;
+}
+
+.page #quartz-body .center,
+.page #quartz-body footer {
+  background: var(--shawn-paper);
+}
+
+.page #quartz-body .center {
+  min-height: calc(100vh - 8rem);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.34);
 }
 
 .article-title h1,
@@ -58,6 +114,8 @@ h3 {
 .sidebar.left,
 .sidebar.right {
   font-size: 0.94rem;
+  background: transparent !important;
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.46);
 }
 
 .explorer,
@@ -67,18 +125,41 @@ h3 {
   border-color: var(--shawn-border);
 }
 
+.search,
+.explorer,
+.graph,
+.backlinks,
+.toc {
+  background: var(--shawn-glass);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+}
+
+.explorer {
+  box-sizing: border-box;
+  min-width: 17.5rem;
+  padding: 0.58rem 0.72rem 0.75rem;
+}
+
+.graph,
+.backlinks,
+.toc {
+  padding: 0.55rem 0.65rem;
+}
+
 .explorer-content {
   max-height: calc(100vh - 15rem);
+  margin-top: 0.45rem;
 }
 
 .explorer .folder-container {
-  margin: 0.15rem 0;
+  margin: 0.25rem 0;
 }
 
 .explorer .folder-title,
 .explorer .nav-file-title {
   border-radius: 6px;
-  padding: 0.15rem 0.25rem;
+  padding: 0.18rem 0.32rem;
 }
 
 .explorer .folder-title:hover,
@@ -88,7 +169,7 @@ h3 {
 
 .explorer .nav-file-title {
   font-size: 0.96rem;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 .graph > .graph-outer {
@@ -96,7 +177,8 @@ h3 {
   height: 390px;
   border: 1px solid var(--shawn-border);
   border-radius: 8px;
-  background: color-mix(in srgb, var(--light) 96%, var(--secondary));
+  background: color-mix(in srgb, var(--light) 70%, transparent);
+  backdrop-filter: blur(6px);
 }
 
 .graph .graph-container canvas {
