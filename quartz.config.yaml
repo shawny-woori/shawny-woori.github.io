@@ -250,22 +250,25 @@ plugins:
       priority: 5
       condition: not-index
   - source: github:quartz-community/comments
-    enabled: false
+    enabled: true
     options:
       provider: giscus
       options:
         repo: shawny-woori/shawny-woori.github.io
-        repoId: TODO_GISCUS_REPO_ID
+        repoId: R_kgDOTNNQag
         category: Announcements
-        categoryId: TODO_GISCUS_CATEGORY_ID
+        categoryId: DIC_kwDOTNNQas4DAi_S
         mapping: pathname
-        strict: "0"
-        reactionsEnabled: "1"
+        strict: false
+        reactionsEnabled: true
         inputPosition: bottom
         lang: ko
+        lightTheme: light_protanopia
+        darkTheme: dark_protanopia
     layout:
       position: afterBody
       priority: 10
+      condition: has-tags
   - source: github:quartz-community/footer
     enabled: true
     options:
