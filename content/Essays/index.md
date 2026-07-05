@@ -1,5 +1,6 @@
 ---
 title: Essays
+comments: false
 tags:
   - index
   - essay

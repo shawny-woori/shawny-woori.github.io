@@ -253,7 +253,16 @@ plugins:
     enabled: false
     options:
       provider: giscus
-      options: {}
+      options:
+        repo: shawny-woori/shawny-woori.github.io
+        repoId: TODO_GISCUS_REPO_ID
+        category: Announcements
+        categoryId: TODO_GISCUS_CATEGORY_ID
+        mapping: pathname
+        strict: "0"
+        reactionsEnabled: "1"
+        inputPosition: bottom
+        lang: ko
     layout:
       position: afterBody
       priority: 10
