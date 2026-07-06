@@ -42,6 +42,9 @@ jobs:
       - name: Build Quartz
         run: npx quartz build
 
+      - name: Add Google Search Console verification
+        run: cp content/googleb6a8b21fa182d025.html public/googleb6a8b21fa182d025.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
